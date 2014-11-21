@@ -23,6 +23,11 @@ var all = {
       password : 'root',
       database : 'sample'
     }
+  },
+
+  // Log
+  log: {
+    path: './log'
   }
 
 };
