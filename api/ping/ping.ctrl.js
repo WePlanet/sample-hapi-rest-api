@@ -5,8 +5,9 @@
 'use strict';
 
 var Joi = require('joi');
-var Ping = {};
+var errors = require('../../components/errors');
 
+var Ping = {};
 Ping.get = {
   handler: function(req, reply) {
     reply({key: 'GET /ping'});
@@ -42,7 +43,7 @@ Ping.put = {
 
 Ping.delete= {
   handler: function(req, reply) {
-    reply({key: 'DELETE /ping'});
+    errors.reply409('This is error message', reply);
   }
 };
 

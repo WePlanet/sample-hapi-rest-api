@@ -7,6 +7,5 @@
 module.exports = function(server) {
 
   require('./api/ping')(server);
-  require('./api/error')(server);
 
 };

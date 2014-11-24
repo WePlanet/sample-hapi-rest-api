@@ -22,7 +22,8 @@
     "good-file": "^3.1.0",
     "hapi": "^7.5.2",
     "joi": "^4.9.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "underscore": "^1.7.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
