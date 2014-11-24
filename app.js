@@ -10,3 +10,5 @@ require('./components/logger')(server);
 server.start(function() {
   console.log('info', 'Server is running at ' + server.info.uri);
 });
+
+
