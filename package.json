@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,22 +18,30 @@
   },
   "homepage": "https://github.com/jeonghwan-kim/sample-hapi-rest-api",
   "dependencies": {
-    "good": "^4.0.0",
-    "good-console": "^2.0.1",
-    "good-file": "^3.1.0",
-    "hapi": "^7.5.2",
-    "joi": "^4.9.0",
+    "good": "^5.1.0",
+    "good-console": "^4.0.0",
+    "good-file": "^4.0.1",
+    "hapi": "^8.0.0",
+    "joi": "^5.0.2",
     "lodash": "^2.4.1",
-    "underscore": "^1.7.0"
+    "mysql": "^2.7.0",
+    "sequelize": "^3.2.0"
   },
   "devDependencies": {
+    "code": "^1.2.1",
     "grunt": "^0.4.5",
+    "grunt-apidoc": "^0.9.0",
     "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-hapi": "^0.8.1",
+    "grunt-lab": "^2.1.2",
     "grunt-mocha-test": "^0.12.4",
     "grunt-nodemon": "^0.3.0",
-    "mocha": "^2.0.1",
-    "should": "^4.3.0"
+    "grunt-open": "^0.2.3",
+    "grunt-rsync": "^0.6.2",
+    "jshint-stylish": "^1.0.0",
+    "lab": "^5.1.0"
   }
 }
