@@ -4,6 +4,8 @@ var path = require('path');
 
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -36,6 +38,15 @@ module.exports = function(grunt) {
       }
     },
 
+    concurrent: {
+      dev: {
+        tasks: ['jshint', 'lab', 'hapi', 'watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+
     lab: {
       files: ['app/**/*.spec.js'],
       nodeEnv: 'development',
@@ -49,15 +60,6 @@ module.exports = function(grunt) {
       coverage: true
     },
 
-    concurrent: {
-      dev: {
-        tasks: ['jshint', 'lab', 'hapi', 'watch'],
-        options: {
-          logConcurrentOutput: true
-        }
-      }
-    },
-
     open: {
       dev: {
         path: 'http://localhost:9000',
@@ -69,14 +71,8 @@ module.exports = function(grunt) {
       }
     }
 
-  });
+  }); // initConfig
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-hapi');
-  grunt.loadNpmTasks('grunt-lab');
-  grunt.loadNpmTasks('grunt-concurrent');
-  grunt.loadNpmTasks('grunt-open');
 
   grunt.registerTask('test', ['jshint', 'lab', 'open:report']);
   grunt.registerTask('server', ['hapi', 'watch']);
